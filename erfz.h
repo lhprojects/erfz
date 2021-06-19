@@ -4,6 +4,8 @@
 #include <cmath>
 #include <math.h>
 
+// This implementation is following:
+// https://granite.phys.s.u-tokyo.ac.jp/svn/LCGT/trunk/sensitivity/Matlab/official/@double/erfz.pdf
 inline std::complex<double> erfz(std::complex<double> const &c)
 {
 	double const Pi = 3.141592653589793238462643383279502884197169399375;
