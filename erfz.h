@@ -22,10 +22,12 @@ inline double exp_minus(double a, double b)
 }
 // This implementation is following:
 // https://granite.phys.s.u-tokyo.ac.jp/svn/LCGT/trunk/sensitivity/Matlab/official/@double/erfz.pdf
-// before you do some `smart` optimizations, think about if your optimization will cause an overflow!
+// implementation: lihawl AT hotmail DOT com
 inline std::complex<double> erfz(std::complex<double> const &c)
 {
-    // OK! I think one can stil improve the speed of the code by at least 50%, by some naive optimization.
+    // OK! I think one can stil improve the speed of the code by at least 10%, by some naive optimization.
+    // But before you do some `smart` optimizations, think about if your optimization will cause an overflow!
+    // And after any modification, run the test_erfz.cpp to check results!
     typedef std::complex<double> Complex;
     double const Pi = 3.141592653589793238462643383279502884197169399375;
     double const Re = c.real();
